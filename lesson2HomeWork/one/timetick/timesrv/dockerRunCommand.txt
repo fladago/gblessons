@@ -1,0 +1,4 @@
+//Create image from Dockerfile
+docker build -t timesrv .
+//Run container
+docker run -p 9000:9000 timesrv --name timesrv

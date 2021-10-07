@@ -1,0 +1,15 @@
+version: "3.9" # optional since v1.27.0
+services:
+  server:
+    restart: always
+    build: ./timesrv
+    container_name: "server"
+    ports:
+      - "9000:9000"
+  client:
+    build: ./timecli
+    ports:
+      - "9001:9001"
+    # network_mode: host
+    depends_on:
+      - server
