@@ -1,0 +1,6 @@
+//Create image from Dockerfile
+docker build -t chatcli .
+//Run container
+docker run -it -p 8001:8001 chatcli --name timecli
+//Из контейнера достучаться не получится ввиду отсутствия общей сети.
+//Надо делать через docker-compose
