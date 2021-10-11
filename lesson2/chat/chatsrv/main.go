@@ -16,19 +16,23 @@ var (
 )
 
 func main() {
+	// Running server
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)
 	}
 
+	// Send messages to all clients
 	go broadcaster()
+
+	// Check connection
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
 			log.Print(err)
 			continue
 		}
-		go handleConn(conn)
+		go handleConn(conn) //Новое соединение
 	}
 }
 

@@ -1,0 +1,19 @@
+basePath: /
+consumes:
+- application/json
+host: localhost:8080
+info:
+  contact:
+    email: vladimir@mail.com
+    name: Vladimir Romashkin
+    url: https://vladimir.com
+  description: This is a sample recipes API.
+  title: Recipes API
+  version: 1.0.0
+paths: {}
+produces:
+- application/json
+schemes:
+- http
+- https
+swagger: "2.0"
